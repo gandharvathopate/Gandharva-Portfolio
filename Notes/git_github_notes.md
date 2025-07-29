@@ -1,6 +1,7 @@
 # 🚀 GitHub Command Reference (Code-Only)
 
 ## 🔧 Git Setup
+🔸 **Result:**
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your@example.com"
