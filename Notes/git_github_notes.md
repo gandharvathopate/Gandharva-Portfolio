@@ -1,112 +1,61 @@
-# 🧠 GitHub & Git Basics
-This guide covers the most commonly used Git commands and GitHub practices to help beginners manage projects, collaborate, and contribute efficiently.
+# 🚀 GitHub Command Reference (Code-Only)
 
-
-
-## 🛠️ Setup Git
-
-Before starting, configure your identity:
-
+## 🔧 Git Setup
+```bash
 git config --global user.name "Your Name"
-git config --global user.email "you@example.com"
+git config --global user.email "your@example.com"
 git config --global color.ui auto
+```
 
+## 📁 Create / Clone Repository
+```bash
+git init
+git clone https://github.com/your-username/your-repo.git
+```
 
+## ✅ Stage & Commit
+```bash
+git status
+git add .
+git commit -m "Initial commit"
+```
 
-## 📂 Create or Clone a Repository
+## 📤 Push to GitHub
+```bash
+git remote add origin https://github.com/your-username/your-repo.git
+git push -u origin main
+```
 
-git init # Initialize a Git repository in your folder
-git clone <url> # Copy an existing repository from GitHub
+## 🌱 Branching
+```bash
+git branch
+git branch new-feature
+git checkout new-feature
+git merge main
+```
 
+## 🔄 Pull & Update
+```bash
+git pull origin main
+git fetch origin
+```
 
+## 🔥 Stashing Changes
+```bash
+git stash
+git stash list
+git stash pop
+```
 
-## ✅ Stage & Commit Changes
+## 🧹 Undo / Reset
+```bash
+git reset <file>
+git reset --hard <commit>
+git restore <file>
+```
 
-git status # View modified files
-git add <file> # Stage a specific file
-git add . # Stage all files
-git diff # See unstaged changes
-git diff --staged # See staged changes
-git commit -m "message" # Commit staged changes
-
-
-
-## 🔁 Undo / Reset
-
-git reset <file> # Unstage a file, keep changes
-git reset --hard <commit> # Revert to a specific commit (DANGER!)
-
-
-
-## 🌱 Branching & Merging
-
-git branch # List branches
-git branch <name> # Create a new branch
-git checkout <name> # Switch to a branch
-git merge <branch> # Merge another branch into current
-git log # Show commit history
-
-
-
-## 🌐 Collaborate with GitHub
-
-git remote add origin <url> # Link local repo with GitHub
-git fetch # Fetch remote changes
-git pull # Pull changes and merge
-git push # Push local commits to GitHub
-
-
-
-## 🔁 Move / Delete Files
-
-git rm <file> # Delete and stage for commit
-git mv old new # Rename a file
-
-
-
-## 🔍 Inspect Changes
-
-git log --stat # Commit log + file changes
-git log --follow <file> # Log for a specific file, including renames
-git diff branchA..branchB # Compare branches
-git show <SHA> # Show commit or file details by hash
-
-
-
-## 🔒 Stashing Temporary Changes
-
-git stash # Save changes temporarily
-git stash list # View stashed changes
-git stash pop # Reapply stashed changes
-git stash drop # Delete latest stash
-
-
-
-## 🧹 Ignore Unwanted Files
-
-Create a `.gitignore` file in your project root:
-
-logs/
-*.log
-*.tmp
+## 📦 Ignore Files
+```bash
+# .gitignore example
 node_modules/
-
-
-
-## 👥 GitHub GUI Tools
-
-- GitHub Desktop (Windows/Mac): https://desktop.github.com/
-- GitHub Web Interface: https://github.com/
-- Git for All Platforms: https://git-scm.com/
-
-
-
-## 🎓 Recommended for Students
-
-- GitHub Education Pack: https://education.github.com/
-- Interactive Git Learning: https://learngitbranching.js.org/
-- GitHub Docs: https://docs.github.com/en
-
-
-
-> 🧠 **Pro Tip**: Make frequent commits with meaningful messages. Version control is not just for code—use it for notes, reports, projects, and more!
+*.log
